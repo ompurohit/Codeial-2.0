@@ -1,0 +1,16 @@
+{
+  "name": "codeial-2.0",
+  "version": "2.0.0",
+  "description": "it is kind of similear to social sites",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "social-app",
+    "codeial",
+    "social-media"
+  ],
+  "author": "om purohit",
+  "license": "ISC"
+}
