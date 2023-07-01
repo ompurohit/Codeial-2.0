@@ -1,18 +1,28 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const expressLayouts = require('express-ejs-layouts');
+const PORT = process.env.PORT || 3000;
+const db = require('./config/mongoose');
 
-const PORT = 3000;
+app.use(expressLayouts);
 
 
-// set view engine 
-app.set('view engine', 'ejs');
+// extract style and layouts from sub pages into layouts 
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
 
 //set view path
-app.set('views', path.join(__dirname, './resources/views'));
+app.set('views', './views');
+// set view engine 
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-    res.render('home');
-});
+app.use(express.urlencoded());
+
+
+
+// initialize routes 
+app.use('/',require('./routes'));
 
 app.listen(PORT, ()=> console.log(`Server is running on PORT ${PORT}`));

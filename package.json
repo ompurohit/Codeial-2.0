@@ -1,22 +1,36 @@
 {
-  "name": "codeial-2.0",
-  "version": "2.0.0",
-  "description": "it is kind of similear to social sites",
+  "name": "issue-tracker",
+  "version": "1.0.0",
+  "description": "It is issue tracker application where you can create your issue. create new project, assign it to your team member. It is similar to github issue tracker",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ompurohit/issue-tracker.git"
+  },
   "keywords": [
-    "social-app",
-    "codeial",
-    "social-media"
+    "issue-tracker",
+    "tracker"
   ],
   "author": "om purohit",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ompurohit/issue-tracker/issues"
+  },
+  "homepage": "https://github.com/ompurohit/issue-tracker#readme",
   "dependencies": {
+    "connect-mongo": "^5.0.0",
+    "dotenv": "^16.1.4",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^7.2.4",
     "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
   }
 }
